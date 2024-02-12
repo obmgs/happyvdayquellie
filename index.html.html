@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gf-vday</title>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background-color: #ffccff;
+            padding: 50px;
+            color: #333;
+        }
+
+        h1 {
+            color: #ff69b4;
+        }
+
+        p {
+            font-size: 15px;
+            margin-top: 20px;
+        }
+
+        .images-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .image:hover {
+            transform: scale(1.1);
+        }
+
+        .button-container {
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: #ff69b4;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .dialog {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 30px;
+            background-color: #ffdab9;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .dialog p {
+            font-size: 15px;
+            margin-bottom: 20px;
+        }
+
+        .dialog button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #ff69b4;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>happy valentine's day!</h1>
+    <p>hello pangga..</p>
+    <p>i made this for you :) hope u like it (click the pics)</p>
+
+    <!-- Images Pop-up -->
+    <div class="images-container">
+        <img class="image" src="images/juyeon1.jpg" alt="juyeon1" onclick="alert('mahal.. im genuinely happy that we got together. you bring so much joy to my life pls know that im your forever lover')">
+        <img class="image" src="images/juyeon2.jpg" alt="Image 2" onclick="alert('how i sleep knowing that i have a really pretty girlfriend :3')">
+        <img class="image" src="images/juyeon3.jpg" alt="Image 3" onclick="alert('happy hearts day baby i wish i was there to take you out and treat you like a princess, but being miles apart, all i can do is make simple things like this. cant wait to see you hehe')">
+    </div>
+
+    <div class="button-container">
+        <button onclick="showDialog()">click me</button>
+    </div>
+
+    <!-- Dialog Box -->
+    <div class="dialog" id="dialogBox">
+        <p>dyk? life's just nicer with you by my side ^__^</p>
+        <p>would you like to go on a date with me?</p>
+        <button onclick="showDate()">yes, let's go!</button>
+        <button onclick="showNextTimeMessage()">maybe next time</button>
+    </div>
+
+    <script>
+        function showDialog() {
+            document.getElementById('dialogBox').style.display = 'block';
+        }
+
+        function closeDialog() {
+            document.getElementById('dialogBox').style.display = 'none';
+        }
+
+        function showDate() {
+            alert("yay! can't wait for v day ><");
+        }
+
+        function showImagePopup(imageSrc, message) {
+            alert("axcelle is very happy that you chose him.");
+        }
+
+        function showNextTimeMessage() {
+            alert("nooo pls say yes..");
+        }
+    </script>
+</body>
+</html>
